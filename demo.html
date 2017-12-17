@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1.0,width=device-width,maximum-scale=1.0,user-scalable=no"/>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/weui.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <style>
+        header{width: 100%;height: 33px;line-height: 33px;background: #00b600;color: #fff;text-align: center;}
+        .banner img{width: 100%;height: 120px;}
+        .content_h{color: #494949;height: 37px;line-height: 37px;}
+        .refresh{margin-top: 20px;}
+        .arc_t{margin-top: 20px;}
+        #swiper1 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 80%;
+            top: 33%;
+            margin-left: -150px;
+            margin-top: -150px;
+        }
+        .slide1 {
+            background-position: center;
+            background-size: cover;
+        }
+        #page{
+            bottom: -34px;
+        }
+        #swiper2 {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-top: 115px;
+        }
+        #swiper2 .slide2 {
+            background-position: center;
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+
+        }
+        #swiper3 {
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+        }
+        .slide3 {
+            background-position: center;
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+        }
+        .warn{text-align: center;margin-top: 29px;margin-bottom: 22px;}
+        .warn h3{margin-top: 29px;}
+        .button{width: 90%;height: 36px;line-height: 36px;}
+        .btn_div{margin-bottom: 156px;}
+        .footer{position: relative;}
+        body, html {
+            height: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h2>豆瓣</h2>
+</header>
+
+<div class="weui-tab">
+    <div class="weui-tab__bd">
+        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+            <div class="weui-search-bar" id="searchBar">
+                <form class="weui-search-bar__form">
+                    <div class="weui-search-bar__box">
+                        <i class="weui-icon-search"></i>
+                        <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required/>
+                        <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                    </div>
+                    <label class="weui-search-bar__label" id="searchText">
+                        <i class="weui-icon-search"></i>
+                        <span>搜索</span>
+                    </label>
+                </form>
+                <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+            </div>
+            <div class="swiper-container banner" id="banner">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/1_banner.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/1_banner2%20(1).jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/1_banner3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/1_banner4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/1_banner5.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination page"></div>
+            </div>
+            <div class="weui-cells__title list_h content_h">我的关注</div>
+            <div class="weui-grids">
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="images/1_icon1.jpg" alt="">
+                    </div>
+                    <p class="weui-grid__label">电影</p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="images/1_icon2.jpg" alt="">
+                    </div>
+                    <p class="weui-grid__label">电视 </p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="images/1_icon3.jpg" alt="">
+                    </div>
+                    <p class="weui-grid__label">图书</p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="images/1_icon4.jpg" alt="">
+                    </div>
+                    <p class="weui-grid__label">同城</p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="images/1_icon5.jpg" alt="">
+                    </div>
+                    <p class="weui-grid__label">小组</p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="images/1_icon6.jpg" alt="">
+                    </div>
+                    <p class="weui-grid__label">音乐</p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="images/1_icon7.jpg" alt="">
+                    </div>
+                    <p class="weui-grid__label">阅读</p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="images/1_icon8.jpg" alt="">
+                    </div>
+                    <p class="weui-grid__label">游戏</p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="images/1_icon9.jpg" alt="">
+                    </div>
+                    <p class="weui-grid__label">应用</p>
+                </a>
+            </div>
+        </div>
+        <div id="tab2" class="weui-tab__bd-item">
+            <div class="weui-pull-to-refresh__layer refresh">
+                <div class='weui-pull-to-refresh__arrow'></div>
+                <div class='weui-pull-to-refresh__preloader'></div>
+                <div class="down">下拉刷新</div>
+                <div class="up">释放刷新</div>
+                <div class="refresh">正在刷新</div>
+            </div>
+            <p id="time"></p>
+            <div class="page__bd">
+                <article class="weui-article">
+                    <h2 class="title arc_t">逃避症患者生存指南</h2>
+                    <section>
+                        <h3>文/荞麦</h3>
+                        <section>
+                            <h3>1</h3>
+                            <div id ="list">
+                                <p  class='demos-content-padded' >
+                                    去年年底的时候，面对公司即将到来的新一轮人事变
+                                    动,我收拾行李去了美国。每次知道公司有什么变
+                                    化，总是想：“幸好我不在......”<br>
+                                    去年年底的时候，面对公司即将到来的新一轮人事变
+                                    动,我收拾行李去了美国。每次知道公司有什么变
+                                    化，总是想：“幸好我不在......”
+                                </p>
+                            </div>
+
+                            <p ><img src="images/2_banner.jpg" alt=""></p>
+                            <div class="weui-loadmore">
+                                <i class="weui-loading"></i>
+                                <span class="weui-loadmore__tips">正在加载</span>
+                            </div>
+                        </section>
+                    </section>
+                </article>
+            </div>
+        </div>
+        <div id="tab3" class="weui-tab__bd-item">
+            <div class="weui-cells__title list_h ">影院热映</div>
+            <div class="swiper-container " id="swiper1">
+                <div class="swiper-wrapper">
+                    <div class=" slide1 swiper-slide" style="background-image: url('images/3_banner1.jpg')"></div>
+                    <div class="slide1 swiper-slide" style="background-image: url('images/3_banner2.jpg')"></div>
+                    <div class="slide1 swiper-slide" style="background-image: url('images/3_banner3.jpg')"></div>
+                    <div class="slide1 swiper-slide" style="background-image: url('images/3_banner1.jpg')"></div>
+                    <div class="slide1 swiper-slide" style="background-image: url('images/3_banner2.jpg')"></div>
+                </div>
+                <div class="swiper-pagination page1"id="page" ></div>
+            </div>
+
+            <div class="swiper-container " id="swiper2">
+                <div class="swiper-wrapper">
+                    <div class=" slide2 swiper-slide" style="background-image: url('images/3_banner1.jpg')"></div>
+                    <div class="slide2 swiper-slide" style="background-image: url('images/3_banner2.jpg')"></div>
+                    <div class="slide2 swiper-slide" style="background-image: url('images/3_banner3.jpg')"></div>
+                    <div class="slide2 swiper-slide" style="background-image: url('images/3_banner1.jpg')"></div>
+                    <div class="slide2 swiper-slide" style="background-image: url('images/3_banner2.jpg')"></div>
+                </div>
+                <div class="swiper-pagination page2" ></div>
+            </div>
+            <div class="swiper-container " id="swiper3">
+                <div class="swiper-wrapper">
+                    <div class=" slide3 swiper-slide" style="background-image: url('images/3_banner1.jpg')"></div>
+                    <div class="slide3 swiper-slide" style="background-image: url('images/3_banner2.jpg')"></div>
+                    <div class="slide3 swiper-slide" style="background-image: url('images/3_banner3.jpg')"></div>
+                    <div class="slide3 swiper-slide" style="background-image: url('images/3_banner1.jpg')"></div>
+                    <div class="slide3 swiper-slide" style="background-image: url('images/3_banner2.jpg')"></div>
+                </div>
+                <div class="swiper-pagination page3" ></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-prev btn_p"></div>
+                <div class="swiper-button-next btn_n"></div>
+
+            </div>
+        </div>
+        <div id="tab4" class="weui-tab__bd-item">
+            <div class="warn">
+                <i class="weui-icon-warn weui-icon_msg"></i>
+                <div class="page__hd">
+                    <h3 class="page__title">您还没有登录哦</h3>
+                    <div class="weui-cells__title">未登录是无法查看的哦，已有账号赶快去登录，没有
+                        帐号请先注册后再登录
+                    </div>
+                </div>
+            </div>
+            <div class="button-sp-area btn_div">
+                <a href="javascript:;" id='show-success' class="weui-btn weui-btn_primary">toptip</a>
+                <a href="javascript:;" class="weui-btn weui-btn_primary button" id="show-login">立即登录</a>
+                <a href="javascript:;" class="weui-btn weui-btn_plain-default button">立即注册</a>
+                <a href="javascript:;" class="weui-btn weui-btn_plain-default button " id="pic">photoBrowser</a>
+                <a href="javascript:;" id='show-actions' class="weui-btn weui-btn_primary"> ActionSheet</a>
+                <a href="javascript:;" id='show-notification' class="weui-btn weui-btn_primary">显示通知</a>
+            </div>
+        </div>
+    </div>
+    <div class="weui-tabbar footer">
+        <a href="#tab1" class="weui-tabbar__item ">
+            <div class="weui-tabbar__icon">
+                <img src="./images/footer1.jpg" alt="" class="weui-tabbar__icon">
+            </div>
+            <p class="weui-tabbar__label">首页</p>
+        </a>
+        <a href="#tab2" class="weui-tabbar__item ">
+            <div class="weui-tabbar__icon">
+                <img src="./images/footer2.jpg" alt="" class="weui-tabbar__icon">
+            </div>
+            <p class="weui-tabbar__label">阅读</p>
+        </a>
+        <a href="#tab3" class="weui-tabbar__item ">
+            <div class="weui-tabbar__icon">
+                <img src="./images/footer3.jpg" alt="" class="weui-tabbar__icon">
+            </div>
+            <p class="weui-tabbar__label">电影</p>
+        </a>
+        <a href="#tab4" class="weui-tabbar__item ">
+            <div class="weui-tabbar__icon">
+                <span class="weui-badge" style="position: absolute;top: -2px;right: 12px;">8</span>
+                <img src="./images/footer4.jpg" alt="" class="weui-tabbar__icon">
+            </div>
+            <p class="weui-tabbar__label">我的</p>
+        </a>
+    </div>
+</div>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/jquery-weui.min.js"></script>
+<script src="js/swiper.js"></script>
+<script type="text/javascript">
+    var mySwiper = new Swiper('#banner',{
+        pagination:'.page',
+        paginationClickable:true
+    })
+    $('#tab2').pullToRefresh().on('pull-to-refresh',function(){
+        setTimeout(function(){
+            $(document.body).pullToRefreshDone();
+        },2000);
+    });
+
+    var loading = false;
+    $(document.body).infinite().on("infinite", function() {
+        if(loading) return;
+        loading = true;
+        setTimeout(function() {
+            $("#list").append("<p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》英文版有1100多页，教学内容非常丰富，不但涵盖了人工智能基础、问题求解、知识推理与规划等经典内容，而且还包括不确定知识与推理、机器学习、通讯感知与行动等专门知识的介绍。目前我们为本科生开设的学科基础必修课“人工智能导论”主要介绍其中的经典内容，而研究生必修的核心课程“人工智能原理”主要关注其中的专门知识。其实《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》也适合希望提高自身计算系统设计水平的广大应用计算技术的社会公众，对参加信息学奥林匹克竞赛和ACM程序设计竞赛的选手及其教练员也有一定的参考作用。</p>");
+            loading = false;
+        }, 2000);
+    });
+    var swiper1 = new Swiper('#swiper1', {
+        pagination: '.page1',
+        effect: 'cube',
+        grabCursor: true,
+        cube: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94
+        }
+    });
+
+    var swiper2 = new Swiper('#swiper2', {
+        pagination: '.page2',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
+    });
+    var swiper3 = new Swiper('#swiper3', {
+        pagination: '.page3',
+        effect: 'flip',
+        grabCursor: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
+    });
+    $(document).on('click','#show-success',function(){
+        $.toptip('toptip','success');
+    })
+    $(document).on('click','#show-login',function(){
+        $.login({
+            title:'登录',
+            text:'请输入用户名和密码',
+
+            onOK:function(username,password){
+                console.log(username, password);
+                $.toast('登录成功')
+            },
+            onCancel: function(){
+                $.toast('取消登录','cancel')
+            }
+        })
+    })
+    var pic = $.photoBrowser({
+        items: [
+            {
+                image: "./images/atc01.jpg",
+                caption: "第一幅图"
+            },
+            {
+                image: "./images/atc02.jpg",
+                caption: "第二幅图"
+            },
+            {
+                image: "./images/atc03.jpg",
+                caption: "第三幅图"
+            },
+            {
+                image: "./images/atc04.jpg",
+                caption: "第四幅图"
+            },
+            {
+                image: "./images/atc05.jpg",
+                caption: "第五幅图"
+            }
+        ],
+        initIndex: 2
+
+    });
+    $("#pic").click(function() {
+        pic.open();
+    });
+
+    $(document).on("click", "#show-actions", function() {
+        $.actions({
+            title: "选择操作",
+            onClose: function () {
+                console.log("close");
+            },
+            actions: [
+                {
+                    text: "发布",
+                    className: "color-primary",
+                    onClick: function () {
+                        $.alert("发布成功");
+                    }
+                },
+                {
+                    text: "编辑",
+                    className: "color-warning",
+                    onClick: function () {
+                        $.alert("你选择了“编辑”");
+                    }
+                },
+                {
+                    text: "删除",
+                    className: 'color-danger',
+                    onClick: function () {
+                        $.alert("你选择了“删除”");
+                    }
+                }
+            ]
+        });
+    })
+    $(document).on("click", "#show-notification", function() {
+        $.noti({
+            title: "中奖啦！",
+            text: "点击领取腾讯撸啊撸杯二等奖！",
+            media: "<img src='./images/present.png' />",
+            data: {
+                message: "逗你玩的!"
+            },
+            time: 3000,
+            onClick: function(data) {
+                $.alert(data.message);
+            }
+        });
+    });
+</script>
+</body>
+</html>
